@@ -11,18 +11,17 @@
     <packaging>war</packaging>
     <properties>
         <dir>${project.build.directory}</dir>
-        <name>${project.name}</name>
+        <name>${project.build.finalName}</name>
     </properties>
     <build>
-        <finalName>${name}</finalName>
         <plugins>
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
                     <outputDirectory>${dir}</outputDirectory>
+                    <finalName>${name}</finalName>
                 </configuration>
             </plugin>
         </plugins>
