@@ -11,6 +11,6 @@
     <packaging>war</packaging>
 
     <build>
-        <directory>/root/projects/build/${project.name}</directory>
+        <directory>/root/projects/build/</directory>
     </build>
 </project>
