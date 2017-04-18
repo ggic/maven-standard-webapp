@@ -10,4 +10,7 @@
 
     <packaging>war</packaging>
 
+    <build>
+        <directory>/root/projects/build/${project.name}</directory>
+    </build>
 </project>
