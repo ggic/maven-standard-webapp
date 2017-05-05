@@ -1,5 +1,7 @@
-FROM openjdk:7-jre-alpine
+FROM openjdk:7
 MAINTAINER Patrick.Wang <233381335@qq.com>
+
+#RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV ROOT /usr/local
 RUN mkdir $ROOT/software $ROOT/app $ROOT/build
@@ -27,9 +29,10 @@ ENV PATH $PATH:$ROOT/software/apache-maven-3.5.0/bin
 RUN echo ' maven-3.5.0 installed.'
 RUN mvn -version
 
-RUN apk --update add gawk
+RUN apt-get update
+RUN apt-get install -y gawk
 RUN echo 'awk installed.'
-RUN apk --update add git
+RUN apt-get install -y git
 RUN echo 'git installed.'
 
 ADD cd.sh $ROOT/app/

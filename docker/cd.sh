@@ -11,7 +11,7 @@ PROJECT=default_project
 BUILD_HOME=$ROOT/build
 TOMCAT_HOME=$ROOT/app/tomcat
 #kill tomcat
-ps -ef|grep  '/usr/local/app/tomcat/bin/bootstrap.jar' | grep -v grep |awk '{print $1}'|xargs kill -9
+ps -ef|grep  '/usr/local/app/tomcat/bin/bootstrap.jar' | grep -v grep |awk '{print $2}'|xargs kill -9
 
 #remove history data
 rm -rf  $BUILD_HOME/*
