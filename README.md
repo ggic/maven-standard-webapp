@@ -1,1 +1,1 @@
-标准的MAVEN-WEBAPP结构
+# maven-standard-webapp
