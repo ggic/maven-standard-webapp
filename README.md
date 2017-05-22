@@ -1,1 +1,1 @@
-空的web项目，用于docker测试.
+标准的MAVEN-WEBAPP结构
